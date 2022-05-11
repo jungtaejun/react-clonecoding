@@ -43,3 +43,28 @@ export const Amenu = styled.a`
 export const Hlogo = styled.img`
  width: 123px;
 `
+export const Subnav = styled.div`
+position: absolute;
+top: 85px;
+left: 0px;
+width: 100%;
+height: 255px;
+background: rgba(200, 200, 200, 0.9);
+ display: block;
+`
+export const HeaderSubmenu = styled.div`
+ position: relative;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ box-pack: justify;
+ justify-content: space-between;
+ width: 50%;
+`
+export const SubmenuA = styled.a`
+ width: 95px;
+ text-align: center;
+ color: rgb(51, 46, 84);
+ display: block;
+ padding-top: 32px;
+` 
