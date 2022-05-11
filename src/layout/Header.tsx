@@ -1,21 +1,25 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { Atag, Full, Haedermenu, Imgstyle } from '../index.style';
+import { Amenu, Fix, Full, Headerflex, Headermenu, Hlogo } from '../index.style';
 function Header() {
   return (
     <Fragment>
-        <Atag href='/'>
-          <Imgstyle src='images/다운로드.png' alt='로고'/>
-        </Atag>
-        <Full>
-          <Haedermenu>
-            <Atag href='#'>COMPANY</Atag>
-            <Atag href='#'>SERVICE</Atag>
-            <Atag href='#'>WORK</Atag>
-            <Atag href='#'>NEWS</Atag> 
-            <Atag href='#'>CONTACT US</Atag>
-          </Haedermenu>
-        </Full>
+      <Fix>
+        <Headerflex>
+          <a href="/">
+            <Hlogo src="images/다운로드.png" alt="퍼플시드 로고" />
+          </a>
+          <Full>
+            <Headermenu>
+              <Amenu href='#'>COMPANY</Amenu>
+              <Amenu href='#'>SERVICE</Amenu>
+              <Amenu href='#'>WORK</Amenu>
+              <Amenu href='#'>NEWS</Amenu>
+              <Amenu href='#'>CONTENT US</Amenu>
+            </Headermenu>
+          </Full>
+        </Headerflex>
+      </Fix>
     </Fragment>
   );
 }
