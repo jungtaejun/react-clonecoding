@@ -50,7 +50,7 @@ left: 0px;
 width: 100%;
 height: 255px;
 background: rgba(200, 200, 200, 0.9);
- display: block;
+ display: none;
 `
 export const HeaderSubmenu = styled.div`
  position: relative;

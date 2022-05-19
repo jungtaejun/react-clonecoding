@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Amenu, Fix, Full, Headerflex, Headermenu, Hlogo, HeaderSubmenu, Subnav, SubmenuA } from '../index.style';
-function Header() {
+const Header = () => {
   return (
     <Fragment>
       <Fix>
@@ -10,13 +10,13 @@ function Header() {
             <Hlogo src="images/다운로드.png" alt="퍼플시드 로고" />
           </a>
           <Full>
-            <Headermenu>
+            <Headermenu >
               <Amenu href='#'>COMPANY</Amenu>
               <Amenu href='#'>SERVICE</Amenu>
               <Amenu href='#'>WORK</Amenu>
               <Amenu href='#'>NEWS</Amenu>
               <Amenu href='#'>CONTENT US</Amenu>
-            </Headermenu>
+            </Headermenu> 
             <Subnav>
               <HeaderSubmenu>
                 <div>
@@ -49,5 +49,4 @@ function Header() {
     </Fragment>
   );
 }
-
 export default Header;
