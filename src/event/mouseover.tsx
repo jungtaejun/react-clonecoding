@@ -1,12 +1,19 @@
-import React, { Fragment, useState } from 'react';
-const mouseover = () => {
-  const [over, setOver] = useState<boolean>(true)
-  const [out, setOut] = useState<boolean>(false)
-
+import React, { Fragment, useState } from 'react'
+const [ style, setStyle] = useState({display: 'none'})
+function Mouseover() {
   return (
-    <div className={`App ${over ? 'over' : 'out'}`}>
-      
-    </div>
+    <Fragment>
+      <div className='over'
+      onMouseEnter={(e) => {
+        setStyle({display: 'block'})
+      }}    
+      onMouseLeave={(e) => {
+        setStyle({display: 'none'})
+      }}
+      >
+      </div>
+    </Fragment>
   )
 
 }
+export default Mouseover;

@@ -1,4 +1,4 @@
-import exp from "constants"
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export const Fix = styled.div`
@@ -68,3 +68,48 @@ export const SubmenuA = styled.a`
  display: block;
  padding-top: 32px;
 ` 
+export const FooterMain = styled.div`
+ position: relative;
+ width: 100%;
+ height: auto;
+ background: #000;
+ color: #fff;
+ font-weight:400;
+ padding: 40px 0px;
+`
+export const HeaderPadding = styled.div` 
+  padding: 85px 0 0 0;
+`
+export const Footercontent= styled.div`
+ display: flex;
+ box-pack:justify;
+ justify-content: space-between;
+ padding: 0px;
+ max-width: 1240px;
+ margin: 0 auto;
+`
+export const Footerlogo = styled.img`
+ max-height:45px;
+ margin-bottom:25px;
+`
+export const Footerul = styled.ul`
+ display: flex;
+ flex-wrap: wrap;
+ width: 800px;
+ margin-bottom:0px;
+`
+export const Footerli = styled.li`
+  padding: 0px 20px 0px 0px;
+  font-size: 14px;
+`
+export const Copyright = styled.p`
+  margin: 34px 0px 0px;
+  font-size: 14px;
+`
+export const Sns = styled.div`
+ position: relative;
+ top: 8px;
+`
+export const FooterSnsImg = styled.a`
+ margin-right: 25px;
+`
