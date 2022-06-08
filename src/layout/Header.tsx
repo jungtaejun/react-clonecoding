@@ -6,14 +6,14 @@ interface IHeaderProps {
 
 }
 
-const Header: React.FC<IHeaderProps> = (props : IHeaderProps) =>{
+const Header: React.FC<IHeaderProps> = (props : IHeaderProps) =>{ 
   return (
     <Fragment>
        <Fix>
         <Headerflex>
-          <a href="">
+          <Link to='/'>
             <Hlogo src="images/logo.png" alt="퍼플시드 로고" />
-            </a>
+            </Link>
           <Full>
             <Headermenu >
               <Amenu href=''>COMPANY</Amenu>
