@@ -1,21 +1,18 @@
 import React, { Fragment } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './Home'
-import './layout/index.style'
-import { HeaderPadding } from './layout/index.style'
 import Footer from './layout/Footer'
 import Header from './layout/Header'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 const App: React.FC = () => (
   <Fragment>
-    <Header/>
-    <HeaderPadding></HeaderPadding>
     <BrowserRouter>
+      <Header/>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<Home />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
-    <Footer/>
   </Fragment>
 )
 

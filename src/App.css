@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Pretendard";
 }
 body{
   width: 1903px;
@@ -10,8 +11,14 @@ img {
   vertical-align: middle;
   border-style: none;
 }
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 * {
   list-style: none;

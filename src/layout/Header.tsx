@@ -1,6 +1,17 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import { Amenu, Fix, Full, Headerflex, Headermenu, Hlogo, HeaderSubmenu, Subnav, SubmenuA } from './index.style'
+import { 
+  Amenu, 
+  Fix, 
+  Full, 
+  Headerflex, 
+  Headermenu, 
+  Hlogo, 
+  HeaderSubmenu, 
+  Subnav, 
+  SubmenuA 
+} from './index.style'
+import MainLogo from '../img/mainlogo.png'
 
 interface IHeaderProps {
 
@@ -11,40 +22,40 @@ const Header: React.FC<IHeaderProps> = (props : IHeaderProps) =>{
     <Fragment>
        <Fix>
         <Headerflex>
-          <Link to='/'>
-            <Hlogo src="images/logo.png" alt="퍼플시드 로고" />
-            </Link>
+          <Link to="/">
+            <Hlogo src={ MainLogo } alt="퍼플시드 로고" />
+          </Link>
           <Full>
             <Headermenu >
-              <Amenu href=''>COMPANY</Amenu>
-              <Amenu href=''>SERVICE</Amenu>
-              <Amenu href=''>WORK</Amenu>
-              <Amenu href=''>NEWS</Amenu>
-              <Amenu href=''>CONTENT US</Amenu>
+              <Amenu to="/company">COMPANY</Amenu>
+              <Amenu to="/service">SERVICE</Amenu>
+              <Amenu to="/work">WORK</Amenu>
+              <Amenu to="/news">NEWS</Amenu>
+              <Amenu to="/contact">CONTENT US</Amenu>
             </Headermenu> 
             <Subnav>
               <HeaderSubmenu>
                 <div>
-                  <SubmenuA href=''>회사소개</SubmenuA>
-                  <SubmenuA href=''>브랜드소개</SubmenuA>
-                  <SubmenuA href=''>ceo인사말</SubmenuA>
+                  <SubmenuA to="/company">회사소개</SubmenuA>
+                  <SubmenuA to="/brand">브랜드소개</SubmenuA>
+                  <SubmenuA to="/ceo">ceo인사말</SubmenuA>
                 </div>
                 <div>
-                  <SubmenuA href=''>Marketing</SubmenuA>
-                  <SubmenuA href=''>Contents</SubmenuA>
-                  <SubmenuA href=''>Digital Platform</SubmenuA>
-                  <SubmenuA href=''>Consulting</SubmenuA>
+                  <SubmenuA to="/marketing">Marketing</SubmenuA>
+                  <SubmenuA to="/contents">Contents</SubmenuA>
+                  <SubmenuA to="/digital_platform">Digital Platform</SubmenuA>
+                  <SubmenuA to="/consulting">Consulting</SubmenuA>
                 </div>
                 <div>
-                  <SubmenuA href=''>공기업/정부기관</SubmenuA>
-                  <SubmenuA href=''>사기업</SubmenuA>
+                  <SubmenuA to="/2">공기업/정부기관</SubmenuA>
+                  <SubmenuA to="/3">사기업</SubmenuA>
                 </div>
                 <div>
-                  <SubmenuA href=''>NEWS</SubmenuA>
-                  <SubmenuA href=''>PR MATERIALS</SubmenuA>
+                  <SubmenuA to="/news">NEWS</SubmenuA>
+                  <SubmenuA to="/pr_material">PR MATERIALS</SubmenuA>
                 </div>
                 <div>
-                  <SubmenuA href=''>CONTACT US</SubmenuA>
+                  <SubmenuA to="/contact">CONTACT US</SubmenuA>
                 </div>
               </HeaderSubmenu>
             </Subnav>
