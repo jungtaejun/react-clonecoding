@@ -11,6 +11,10 @@ img {
   vertical-align: middle;
   border-style: none;
 }
+/* .overstyle {
+  background-color: #fff;
+  color: black;
+} */
 .wrap {
   max-width: 1240px;
   margin: 0 auto;

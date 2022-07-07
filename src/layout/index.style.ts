@@ -51,7 +51,7 @@ left: 0px;
 width: 100%;
 height: 255px;
 background: rgba(200, 200, 200, 0.9);
- display: none;
+display: none;
 `
 export const HeaderSubmenu = styled.div`
  position: relative;
@@ -320,4 +320,12 @@ export const ClientsWrapper = styled.div`
 `
 export const ClientsImg = styled.div`
  margin: 10px auto;
+`
+export const CompanyTapImg = styled.img`
+ width: 100%;
+ height: 400px;
+`
+export const OverStyle = styled.div`
+  background-color: #fff;
+  color: #000;
 `

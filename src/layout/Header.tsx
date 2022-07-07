@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
+import '../App.css'
 import { Link } from 'react-router-dom'
 import { 
   Amenu, 
@@ -9,30 +10,43 @@ import {
   Hlogo, 
   HeaderSubmenu, 
   Subnav, 
-  SubmenuA 
+  SubmenuA,
+  OverStyle
 } from './index.style'
 import MainLogo from '../img/mainlogo.png'
 
 interface IHeaderProps {
-
+  
 }
 
-const Header: React.FC<IHeaderProps> = (props : IHeaderProps) =>{ 
+const Header: React.FC<IHeaderProps> = (props : IHeaderProps) =>{
+  const [isHovering, setIsHovering] = useState(0);
+  const handleMouseOver = () => {
+    setIsHovering(1);
+    console.log(1)
+  }
+  const handleMouseOut = () => {
+    setIsHovering(0);
+    console.log(0)
+  }
   return (
     <Fragment>
        <Fix>
         <Headerflex>
           <Link to="/">
-            <Hlogo src={ MainLogo } alt="퍼플시드 로고" />
+            <Hlogo src={ MainLogo } alt="퍼플시드 로고"/>
           </Link>
           <Full>
-            <Headermenu >
+            <Headermenu
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               <Amenu to="/company">COMPANY</Amenu>
               <Amenu to="/service">SERVICE</Amenu>
               <Amenu to="/work">WORK</Amenu>
               <Amenu to="/news">NEWS</Amenu>
-              <Amenu to="/contact">CONTENT US</Amenu>
-            </Headermenu> 
+              <Amenu to="/contact">CONTACT US</Amenu>
+            </Headermenu>
             <Subnav>
               <HeaderSubmenu>
                 <div>
