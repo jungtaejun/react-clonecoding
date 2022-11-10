@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, SyntheticEvent, useState } from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom'
 import { 
@@ -11,43 +11,46 @@ import {
   HeaderSubmenu, 
   Subnav, 
   SubmenuA,
-  OverStyle
 } from './index.style'
 import MainLogo from '../img/mainlogo.png'
+import MainBLogo from '../img/mainBlogo.png'
+
 
 interface IHeaderProps {
   
 }
 
 const Header: React.FC<IHeaderProps> = (props : IHeaderProps) =>{
-  const [isHovering, setIsHovering] = useState(0);
-  const handleMouseOver = () => {
-    setIsHovering(1);
-    console.log(1)
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = (e: SyntheticEvent ) => {
+    setIsHovering(true);
+    // console.log(e)
   }
   const handleMouseOut = () => {
-    setIsHovering(0);
-    console.log(0)
+    setIsHovering(false);
   }
   return (
     <Fragment>
        <Fix>
-        <Headerflex>
+        <Headerflex style={{background : isHovering ? '#fff' : ''}}>
           <Link to="/">
-            <Hlogo src={ MainLogo } alt="퍼플시드 로고"/>
-          </Link>
+            <Hlogo src={ isHovering ? MainBLogo : MainLogo } alt="퍼플시드 로고"/>
+          </Link> 
           <Full>
             <Headermenu
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
+              onMouseEnter={handleMouseOver}
+              onMouseLeave={handleMouseOut}
             >
-              <Amenu to="/company">COMPANY</Amenu>
-              <Amenu to="/service">SERVICE</Amenu>
-              <Amenu to="/work">WORK</Amenu>
-              <Amenu to="/news">NEWS</Amenu>
-              <Amenu to="/contact">CONTACT US</Amenu>
+              <Amenu style={{color : isHovering ? '#000' : '#fff'}} to="/company">COMPANY</Amenu>
+              <Amenu style={{color : isHovering ? '#000' : '#fff'}} to="/marketing">SERVICE</Amenu>
+              <Amenu style={{color : isHovering ? '#000' : '#fff'}} to="/work?tab=1">WORK</Amenu>
+              <Amenu style={{color : isHovering ? '#000' : '#fff'}} to="/news">NEWS</Amenu>
+              <Amenu style={{color : isHovering ? '#000' : '#fff'}} to="/contact">CONTACT US</Amenu>
             </Headermenu>
-            <Subnav>
+            <Subnav style={{display: isHovering ? 'block' : 'none'}}
+            onMouseEnter={handleMouseOver}
+            onMouseLeave={handleMouseOut}
+            >
               <HeaderSubmenu>
                 <div>
                   <SubmenuA to="/company">회사소개</SubmenuA>
@@ -61,8 +64,8 @@ const Header: React.FC<IHeaderProps> = (props : IHeaderProps) =>{
                   <SubmenuA to="/consulting">Consulting</SubmenuA>
                 </div>
                 <div>
-                  <SubmenuA to="/2">공기업/정부기관</SubmenuA>
-                  <SubmenuA to="/3">사기업</SubmenuA>
+                  <SubmenuA to="/work?tab=2">공기업/정부기관</SubmenuA>
+                  <SubmenuA to="/work?tab=3">사기업</SubmenuA>
                 </div>
                 <div>
                   <SubmenuA to="/news">NEWS</SubmenuA>

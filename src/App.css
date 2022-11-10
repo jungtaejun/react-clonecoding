@@ -11,10 +11,9 @@ img {
   vertical-align: middle;
   border-style: none;
 }
-/* .overstyle {
-  background-color: #fff;
-  color: black;
-} */
+.news {
+  text-align: center;
+}
 .wrap {
   max-width: 1240px;
   margin: 0 auto;
