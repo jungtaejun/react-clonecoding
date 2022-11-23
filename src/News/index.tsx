@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react"
 import '../App.css'
-import 'antd/dist/antd.css'
 import { useLocation } from "react-router-dom"
 import { Pagination, PaginationProps } from 'antd'
 import { 

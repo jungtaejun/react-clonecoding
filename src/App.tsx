@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import './App.css'
+import 'antd/dist/antd.css'
 import Home from './Home'
 import Footer from './layout/Footer'
 import Header from './layout/Header'

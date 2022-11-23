@@ -9,9 +9,6 @@ import {
   Tapmenu, 
   Topmaintext, 
   Width100, 
-  WorkarrowBtn, 
-  WorkBtn, 
-  WorkBtn1, 
   Workitem, 
   Worksize, 
   WorkText1, 
@@ -58,13 +55,27 @@ const Work = () => {
     {"title" : '온라인 산업기능요원 채용박람회', "name": '병무청 x 중소벤처기업진흥공단', "img": WorkKosme},
     {"title" : '희망찬 내일을 꿈꾸는 청소년       치료 · 재활센터', "name": '국립중앙청소년디딤센터', "img": WorkDidim},
     {"title" : '2021 온라인 물류산업                   청년 채용 박람회', "name": '국토교통부 x 고용노동부', "img": WorkBilding},
-    {"title" : '평화누리길', "name": '경기관광공사', "img": WorkPyeonwha},
-    {"title" : '2020 온라인 인천 직업계고                      취업 박람회', "name": '인천광역시', "img": WorkTalk},
-    {"title" : '청년드림 JOB 콘서트', "name": '고양시', "img": WorkJob},
-    {"title" : '2020 경기도 온라인 청년            채용 박람회', "name": '경기도 일자리재단', "img": WorkKyungi},
-    {"title" : '2020 해외진출 IP 전략 컨퍼런스', "name": '특허청 x 코트라', "img": WorkIp},
+    {"title" : '우리동네 놀이환경 진단 프로젝트', "name": '세이브더칠드런', "img": WorkSave},
+    {"title" : '배달용기 순환 플랫폼 리플하다', "name": '디비아이', "img": WorkRiffle},
+    {"title" : '몽클레르 향수', "name": '코익 퍼퓸', "img": WorkKoicc},
+    {"title" : '2-TWO BACKPACK', "name": '프로스펙스', "img": WorkProspecs},
+    {"title" : '마시는 프로바이오틱스 바이오티', "name": '(주)위스트', "img": WorkWeast},
   ]
-  
+  const NewsItems = arr.map(function(string, index){
+    return (
+      <Workitem>
+        <Worksize>
+          <div>
+            <div>
+              <img src={string.img} alt="" />
+            </div>
+            <WorkText1>{string.name}</WorkText1>
+            <WorkText2>{string.title}</WorkText2>
+          </div>
+        </Worksize>
+      </Workitem>
+    )
+  })
   return (
     <Fragment>
       <Width100>
@@ -80,15 +91,16 @@ const Work = () => {
           </Tapmenu>
         </Tapmain>}
       <Topmaintext>All</Topmaintext>
-      {qs.currentPage === '1' ? 
+      {qs.currentPage === '1' ?
       <div className="wrap">
-         <WrokGrid>
-         </WrokGrid>
+        <WrokGrid>
+          {NewsItems}
+        </WrokGrid>
       </div>
       : 
       ''}
       <Pagination className="news" total={70} showSizeChanger={false} onChange={onChagepaging}/>
     </Fragment>
   )
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 export default Work
